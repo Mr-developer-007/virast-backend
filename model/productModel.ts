@@ -60,7 +60,6 @@ export interface IProduct extends Document {
   readonly inStock: boolean;
 }
 
-// 3. Schema Definition
 const productSchema = new Schema<IProduct>(
   {
     name: {
