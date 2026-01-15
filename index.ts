@@ -3,16 +3,21 @@ import mongoose from "mongoose";
 import BannerRoute from "./routes/bannerRoutes"
 import categoryRoute from "./routes/categoryRoutes"
 import collectionsRoute from "./routes/collectionRoute"
+import userRoute from "./routes/userRoute"
 import { serveStatic } from "hono/bun";
 
 const app = new Hono();
 
 app.use('/uploads/*', serveStatic({ root: './' }));
 
+
+
+
+
 app.route("/api/v1/banner",BannerRoute)
 app.route("/api/v1/category",categoryRoute)
 app.route("/api/v1/collection",collectionsRoute)
-
+app.route("/api/v1/user",userRoute)
 
 
 
